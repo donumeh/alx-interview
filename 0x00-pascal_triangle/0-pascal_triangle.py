@@ -21,6 +21,9 @@ def pascal_triangle(n):
 
     triangle = []  # triangle inits to list
 
+    if n <= 0:
+        return triangle
+
     for i in range(n):  # number of rows to print
         row = []  # each row value will be added here
 
