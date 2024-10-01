@@ -25,7 +25,6 @@ def pascal_triangle(n):
         row = []  # each row value will be added here
 
         for j in range(i + 1):  # number of values in each row
-
             if i == 0:
                 row.append(1)  # if first row, just append 1
                 break
