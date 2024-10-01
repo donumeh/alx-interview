@@ -30,14 +30,13 @@ def pascal_triangle(n):
                 break
 
             prev_row = i - 1  # get the prev row
-            prev_first_col = j - 1  # get the prev col
+            prev_col = j - 1  # get the prev col
 
-            value1 = (
-                0 if prev_first_col == -1 else triangle[prev_row][prev_first_col]
-            )  # index error checking
-            value2 = 0 if j > (i - 1) else triangle[prev_row][j]  # index error checking
+            # index error checking
+            v1 = 0 if prev_col == -1 else triangle[prev_row][prev_col]
+            v2 = 0 if j > (i - 1) else triangle[prev_row][j]
 
-            sum_value = value1 + value2  # summing values
+            sum_value = v1 + v2  # summing values
             row.append(sum_value)
 
         triangle.append(row)  # appending the rows in triangle
