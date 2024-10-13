@@ -21,6 +21,7 @@ def canUnlockAll(box_list):
 
     keys = [0]
     openBox(box_list, keys, 0, 0)
+    print(keys)
     return len(box_list) == len(keys)
 
 
@@ -37,13 +38,21 @@ def openBox(boxes, keys, key_index, index):
     if index >= len(boxes):
         return
 
-    keys.extend(
-        [
-            elem
-            for elem in boxes[key_index]
-            if elem not in keys and elem < len(boxes)
-        ]
-    )
+    for elem in boxes[key_index]:
+        if elem not in keys:
+            if elem < len(boxes):
+                keys.append(elem)
+    # keys.extend(
+    #     [elem for elem in boxes[key_index] if elem not in keys if elem < len(boxes)]
+    # )
+
+    # keys.extend(
+    # [
+    #     elem
+    #     for elem in boxes[key_index]
+    #     if elem not in keys and elem < len(boxes)
+    # ]
+    # )
     if len(keys) <= index + 1:
         return
     return openBox(boxes, keys, keys[index + 1], index + 1)
