@@ -2,6 +2,12 @@
 
 """
 Checks if all boxes can be unlocked
+
+Functions:
+    canUnlockAll: Check if all the boxes can be
+                unlocked after getting the keys
+
+    OpenBox: Recursive Funtion to open each boxes as keys are found
 """
 
 
