@@ -10,7 +10,7 @@ Functions:
 """
 
 
-def canUnlockAll(boxes: list) -> bool:
+def canUnlockAll(box_list: list) -> bool:
     """
     canUnlockAll: Check if all the boxes can be
                 unlocked after getting the keys
@@ -19,10 +19,8 @@ def canUnlockAll(boxes: list) -> bool:
         boxess: list -> Nested list of keys in all boxes
     """
 
-    KEY_INDEX = 0
-    INDEX = 0
     keys = [0]
-    openBox(boxes, keys, KEY_INDEX, INDEX)
+    openBox(box_list, keys, 0, 0)
     return len(boxes) == len(keys)
 
 
@@ -46,10 +44,6 @@ def openBox(boxes: list, keys: list, key_index: int | None, index: int | None):
 
 
 if __name__ == "__main__":
-    """
-    Test program canUnlockAll
-
-    """
     boxes = [[1], [2], [3], [4], []]
     print(canUnlockAll(boxes))
 
