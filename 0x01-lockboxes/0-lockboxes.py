@@ -21,7 +21,6 @@ def canUnlockAll(box_list):
 
     keys = [0]
     openBox(box_list, keys, 0, 0)
-    print(keys)
     return len(box_list) == len(keys)
 
 
