@@ -47,7 +47,8 @@ def openBox(boxes: list, keys: list, key_index: int | None, index: int | None):
 
 if __name__ == "__main__":
     """
-    Test program
+    Test program canUnlockAll
+
     """
     boxes = [[1], [2], [3], [4], []]
     print(canUnlockAll(boxes))
