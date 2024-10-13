@@ -41,17 +41,7 @@ def openBox(boxes, keys, key_index, index):
         if elem not in keys:
             if elem < len(boxes):
                 keys.append(elem)
-    # keys.extend(
-    #     [elem for elem in boxes[key_index] if elem not in keys if elem < len(boxes)]
-    # )
 
-    # keys.extend(
-    # [
-    #     elem
-    #     for elem in boxes[key_index]
-    #     if elem not in keys and elem < len(boxes)
-    # ]
-    # )
     if len(keys) <= index + 1:
         return
     return openBox(boxes, keys, keys[index + 1], index + 1)
