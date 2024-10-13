@@ -42,7 +42,7 @@ def openBox(boxes, keys, key_index, index):
             if elem < len(boxes):
                 keys.append(elem)
 
-    if len(keys) <= index + 1:
+    if len(keys) <= index + 1 or len(keys) >= len(boxes):
         return
     return openBox(boxes, keys, keys[index + 1], index + 1)
 
