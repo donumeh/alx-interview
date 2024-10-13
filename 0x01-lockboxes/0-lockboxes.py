@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Checks if all boxes can be unlocked
 
@@ -19,6 +18,7 @@ def canUnlockAll(boxes: list) -> bool:
     Args:
         boxess: list -> Nested list of keys in all boxes
     """
+
     KEY_INDEX = 0
     INDEX = 0
     keys = [0]
