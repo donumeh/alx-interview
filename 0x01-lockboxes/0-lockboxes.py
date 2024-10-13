@@ -10,7 +10,7 @@ Functions:
 """
 
 
-def canUnlockAll(box_list: list) -> bool:
+def canUnlockAll(box_list):
     """
     canUnlockAll: Check if all the boxes can be
                 unlocked after getting the keys
@@ -24,7 +24,7 @@ def canUnlockAll(box_list: list) -> bool:
     return len(boxes) == len(keys)
 
 
-def openBox(boxes: list, keys: list, key_index: int | None, index: int | None):
+def openBox(boxes, keys, key_index, index):
     """
     OpenBox: Open each boxes and store the keys found in there
 
