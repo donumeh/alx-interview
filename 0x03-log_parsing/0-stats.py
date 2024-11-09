@@ -29,9 +29,7 @@ def parse_line(line):
     updates status_counts based on the status code and file size
     """
 
-    pattern = (
-        r'^(\d+\.\d+\.\d+\.\d+) - \[.*?\] "GET /projects/260 HTTP/1\.1" (\d{3}) (\d+)$'
-    )
+    pattern = r'^(\d+\.\d+\.\d+\.\d+) - \[(.*?)\] "GET /projects/260 HTTP/1\.1" (\d{3}) (\d+)$'
     match = re.match(pattern, line)
 
     if match:
