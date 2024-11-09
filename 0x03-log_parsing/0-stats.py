@@ -48,7 +48,8 @@ def print_stats():
     Prints the current statistics: total file size
     and count of each status code
     """
-    print(f"File size: {status_counts['file_size']}")
+    if status_counts["file_size"]:
+        print(f"File size: {status_counts['file_size']}")
     for code in sorted(
         k for k in status_counts if isinstance(k, int) and status_counts[k] > 0
     ):
