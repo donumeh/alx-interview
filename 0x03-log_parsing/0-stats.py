@@ -29,9 +29,7 @@ def parse_line(line):
     updates status_counts based on the status code and file size
     """
 
-    pattern = (
-        r'(\d+\.\d+\.\d+\.\d+) - \[(.*?)\] "GET /projects/260 HTTP/1.1" (\d{3}) (\d+)'
-    )
+    pattern = r'^(\d+\.\d+\.\d+\.\d+) - \[(.*?)\] "GET /projects/260 HTTP/1\.1" (\d{3}) (\d+)$'
     match = re.match(pattern, line)
 
     if match:
@@ -48,22 +46,12 @@ def print_stats():
     Prints the current statistics: total file size
     and count of each status code
     """
-    if status_counts["file_size"]:
-        print(f"File size: {status_counts['file_size']}")
+
+    print(f"File size: {status_counts['file_size']}")
     for code in sorted(
         k for k in status_counts if isinstance(k, int) and status_counts[k] > 0
     ):
         print(f"{code}: {status_counts[code]}")
-
-
-def reset_stats():
-    """
-    Resets status counts except for the total file size
-    """
-
-    for code in status_counts:
-        if isinstance(code, int):
-            status_counts[code] = 0
 
 
 def signal_handler(signum, frame):
@@ -86,5 +74,6 @@ for line in sys.stdin:
     if line_count % 10 == 0:
         print_stats()
 
-if line_count % 10 != 0:
+
+if line_count > 0:
     print_stats()
