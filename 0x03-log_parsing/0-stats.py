@@ -29,16 +29,22 @@ def parse_line(line):
     updates status_counts based on the status code and file size
     """
 
-    pattern = r'^(\d+\.\d+\.\d+\.\d+) - \[(.*?)\] "GET /projects/260 HTTP/1\.1" (\d{3}) (\d+)$'
+    pattern = (
+        r'^(\d+\.\d+\.\d+\.\d+) - \[.*?\] "GET /projects/260 HTTP/1\.1" (\d{3}) (\d+)$'
+    )
     match = re.match(pattern, line)
 
     if match:
-        status_code = int(match.group(3))
-        file_size = int(match.group(4))
+        try:
+            status_code = int(match.group(3))
+            file_size = int(match.group(4))
 
-        status_counts["file_size"] += file_size
-        if status_code in status_counts:
-            status_counts[status_code] += 1
+            status_counts["file_size"] += file_size
+            if status_code in status_counts:
+                status_counts[status_code] += 1
+
+        except (ValueError, TypeError):
+            pass
 
 
 def print_stats():
