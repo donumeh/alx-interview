@@ -29,7 +29,9 @@ def parse_line(line):
     updates status_counts based on the status code and file size
     """
 
-    pattern = r'((\d*\.?){1,3}){4} - \[(\d*\-?){3} (\d*:?){3}\.\d*\] "GET /projects/260 HTTP/1\.1" \d{3} \d{1,4}'
+    pattern = (
+        r'(\d+\.\d+\.\d+\.\d+) - \[(.*?)\] "GET /projects/260 HTTP/1.1" (\d{3}) (\d+)'
+    )
     match = re.match(pattern, line)
 
     if match:
@@ -84,8 +86,8 @@ for line in sys.stdin:
         if line_count % 10 == 0:
             print_stats()
 
-if line_count % 10 != 0:
-    print_stats()
+    if line_count % 10 != 0:
+        print_stats()
 
 
 # def main():
