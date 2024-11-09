@@ -85,5 +85,5 @@ for line in sys.stdin:
     if line_count % 10 == 0:
         print_stats()
 
-if line_count % 10 != 0:
-    print_stats()
+# if line_count % 10 != 0:
+#     print_stats()
