@@ -38,6 +38,8 @@ def parse_line(line):
             file_size = int(match.group(4))
 
             status_counts["file_size"] += file_size
+            print(file_size)
+
             if status_code in status_counts:
                 status_counts[status_code] += 1
 
@@ -53,6 +55,7 @@ def parse_line(line):
                 status_code = int(line.split(" ")[-2])
 
                 status_counts["file_size"] += file_size
+                print(file_size)
                 if status_code in status_counts:
                     status_counts[status_code] += 1
 
