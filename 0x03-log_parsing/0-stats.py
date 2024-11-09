@@ -78,16 +78,15 @@ signal.signal(signal.SIGINT, signal_handler)
 
 
 for line in sys.stdin:
-    if line:
-        parse_line(line)
+    parse_line(line)
 
-        line_count += 1
+    line_count += 1
 
-        if line_count % 10 == 0:
-            print_stats()
-
-    if line_count % 10 != 0:
+    if line_count % 10 == 0:
         print_stats()
+
+if line_count % 10 != 0:
+    print_stats()
 
 
 # def main():
