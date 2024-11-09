@@ -77,3 +77,5 @@ for line in sys.stdin:
 
 if line_count > 0:
     print_stats()
+else:
+    print("File size: 0")
