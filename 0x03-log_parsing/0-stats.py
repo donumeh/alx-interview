@@ -29,9 +29,7 @@ def parse_line(line):
     updates status_counts based on the status code and file size
     """
 
-    pattern = (
-        r'(\d+\.\d+\.\d+\.\d+) - \[(.*?)\] "GET /projects/260 HTTP/1.1" (\d{3}) (\d+)'
-    )
+    pattern = r'((\d*\.?){1,3}){4} - \[(\d*\-?){3} (\d*:?){3}\.\d*\] "GET /projects/260 HTTP/1\.1" \d{3} \d{1,4}'
     match = re.match(pattern, line)
 
     if match:
@@ -78,12 +76,13 @@ signal.signal(signal.SIGINT, signal_handler)
 
 
 for line in sys.stdin:
-    parse_line(line)
+    if line:
+        parse_line(line)
 
-    line_count += 1
+        line_count += 1
 
-    if line_count % 10 == 0:
-        print_stats()
+        if line_count % 10 == 0:
+            print_stats()
 
 if line_count % 10 != 0:
     print_stats()
