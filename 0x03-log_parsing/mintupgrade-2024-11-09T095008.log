@@ -1,0 +1,159 @@
+
+Running check 'Phase 1: Preparation'
+=================
+APT Repositories:
+=================
+Repos:
+  No active apt repos in: /etc/apt/sources.list
+  Active apt repos in: /etc/apt/sources.list.d/mozilla.list
+    1: deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main
+  Active apt repos in: /etc/apt/sources.list.d/nodesource.list
+    1: deb [arch=amd64 signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main
+  Active apt repos in: /etc/apt/sources.list.d/official-package-repositories.list
+    1: deb http://packages.linuxmint.com virginia main upstream import backport
+    2: deb http://archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
+    3: deb http://archive.ubuntu.com/ubuntu jammy-updates main restricted universe multiverse
+    4: deb http://archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse
+    5: deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe multiverse
+  Active apt repos in: /etc/apt/sources.list.d/official-source-repositories.list
+    1: deb-src http://packages.linuxmint.com virginia main upstream import backport
+    2: deb-src http://archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
+    3: deb-src http://archive.ubuntu.com/ubuntu jammy-updates main restricted universe multiverse
+    4: deb-src http://archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse
+    5: deb-src http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe multiverse
+  Active apt repos in: /etc/apt/sources.list.d/winehq-jammy.sources
+    1: deb [arch=amd64 i386] https://dl.winehq.org/wine-builds/ubuntu jammy main
+=================
+
+Running check 'Linux Mint version'
+Check succeeded:  Linux Mint version
+
+Running check 'Power source'
+Check succeeded:  Power source
+
+Running check 'APT cache'
+rm -rf /var/lib/apt/lists/*
+DEBIAN_PRIORITY=critical apt-get update
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security/multiverse Sources [10.5 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/universe Sources [212 kB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/restricted Sources [69.4 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/multiverse Sources [304 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/main Sources [301 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/main i386 Packages [556 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1,911 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/main Sources [1,340 kB]
+Get:13 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [307 kB]
+Get:14 http://security.ubuntu.com/ubuntu jammy-security/main amd64 DEP-11 Metadata [43.1 kB]
+Get:15 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [13.3 kB]
+Get:16 http://security.ubuntu.com/ubuntu jammy-security/restricted i386 Packages [38.2 kB]
+Get:17 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [2,545 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy/restricted Sources [23.7 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy/universe Sources [17.8 MB]
+Get:20 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [440 kB]
+Get:21 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 DEP-11 Metadata [208 B]
+Get:22 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [580 B]
+Get:23 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [913 kB]
+Get:24 http://security.ubuntu.com/ubuntu jammy-security/universe i386 Packages [633 kB]
+Get:25 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [181 kB]
+Get:26 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 DEP-11 Metadata [126 kB]
+Get:27 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [19.5 kB]
+Get:28 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [37.2 kB]
+Get:29 http://security.ubuntu.com/ubuntu jammy-security/multiverse i386 Packages [1,356 B]
+Get:30 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [7,588 B]
+Get:31 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 DEP-11 Metadata [208 B]
+Get:32 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [224 B]
+Ign:33 http://packages.linuxmint.com virginia InRelease
+Get:34 https://deb.nodesource.com/node_20.x nodistro InRelease [12.1 kB]
+Get:35 https://dl.winehq.org/wine-builds/ubuntu jammy InRelease [8,041 B]
+Get:36 http://packages.linuxmint.com virginia Release [24.1 kB]
+Get:37 https://deb.nodesource.com/node_20.x nodistro/main amd64 Packages [9,577 B]
+Get:38 https://dl.winehq.org/wine-builds/ubuntu jammy/main all Packages [928 B]
+Get:39 http://packages.linuxmint.com virginia Release.gpg [833 B]
+Get:40 https://dl.winehq.org/wine-builds/ubuntu jammy/main amd64 Packages [255 kB]
+Get:41 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1,395 kB]
+Get:42 http://archive.ubuntu.com/ubuntu jammy/main i386 Packages [1,040 kB]
+Get:43 https://packages.mozilla.org/apt mozilla InRelease [1,522 B]
+Get:44 http://archive.ubuntu.com/ubuntu jammy/main Translation-en [510 kB]
+Get:45 http://archive.ubuntu.com/ubuntu jammy/main amd64 DEP-11 Metadata [423 kB]
+Get:46 http://packages.linuxmint.com virginia/upstream Sources [14.9 kB]
+Get:47 http://archive.ubuntu.com/ubuntu jammy/main amd64 c-n-f Metadata [30.3 kB]
+Get:48 http://archive.ubuntu.com/ubuntu jammy/restricted i386 Packages [30.4 kB]
+Get:49 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [129 kB]
+Get:50 http://archive.ubuntu.com/ubuntu jammy/restricted Translation-en [18.6 kB]
+Get:51 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 c-n-f Metadata [488 B]
+Get:52 http://archive.ubuntu.com/ubuntu jammy/universe i386 Packages [7,474 kB]
+Get:53 http://packages.linuxmint.com virginia/backport Sources [32.4 kB]
+Get:54 http://packages.linuxmint.com virginia/import Sources [3,455 B]
+Get:55 http://packages.linuxmint.com virginia/main Sources [18.6 kB]
+Get:56 https://packages.mozilla.org/apt mozilla/main all Packages [5,491 kB]
+Get:57 http://packages.linuxmint.com virginia/main amd64 Packages [18.5 kB]
+Get:58 http://packages.linuxmint.com virginia/main i386 Packages [17.9 kB]
+Get:59 http://packages.linuxmint.com virginia/upstream i386 Packages [14.6 kB]
+Get:60 http://packages.linuxmint.com virginia/upstream amd64 Packages [48.8 kB]
+Get:61 https://dl.winehq.org/wine-builds/ubuntu jammy/main i386 Packages [254 kB]
+Get:62 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [14.1 MB]
+Get:63 http://archive.ubuntu.com/ubuntu jammy/universe Translation-en [5,652 kB]
+Get:64 http://packages.linuxmint.com virginia/import amd64 Packages [8,341 B]
+Get:65 http://archive.ubuntu.com/ubuntu jammy/universe amd64 DEP-11 Metadata [3,559 kB]
+Get:66 http://packages.linuxmint.com virginia/import i386 Packages [3,678 B]
+Get:67 http://packages.linuxmint.com virginia/backport amd64 Packages [54.9 kB]
+Get:68 http://packages.linuxmint.com virginia/backport i386 Packages [8,307 B]
+Get:69 http://archive.ubuntu.com/ubuntu jammy/universe amd64 c-n-f Metadata [286 kB]
+Get:70 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [217 kB]
+Get:71 http://archive.ubuntu.com/ubuntu jammy/multiverse i386 Packages [112 kB]
+Get:72 http://archive.ubuntu.com/ubuntu jammy/multiverse Translation-en [112 kB]
+Get:73 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 DEP-11 Metadata [42.1 kB]
+Get:74 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 c-n-f Metadata [8,372 B]
+Get:75 http://archive.ubuntu.com/ubuntu jammy-updates/universe Sources [363 kB]
+Get:76 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Sources [73.1 kB]
+Get:77 http://archive.ubuntu.com/ubuntu jammy-updates/main Sources [522 kB]
+Get:78 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse Sources [19.5 kB]
+Get:79 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [2,146 kB]
+Get:80 http://archive.ubuntu.com/ubuntu jammy-updates/main i386 Packages [718 kB]
+Get:81 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [367 kB]
+Get:82 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 DEP-11 Metadata [103 kB]
+Get:83 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [17.9 kB]
+Get:84 http://archive.ubuntu.com/ubuntu jammy-updates/restricted i386 Packages [39.8 kB]
+Get:85 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2,633 kB]
+Get:86 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [455 kB]
+Get:87 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 DEP-11 Metadata [212 B]
+Get:88 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [612 B]
+Get:89 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1,134 kB]
+Get:90 http://archive.ubuntu.com/ubuntu jammy-updates/universe i386 Packages [738 kB]
+Get:91 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [265 kB]
+Get:92 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 DEP-11 Metadata [356 kB]
+Get:93 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [26.4 kB]
+Get:94 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [43.3 kB]
+Get:95 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse i386 Packages [4,752 B]
+Get:96 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [10.8 kB]
+Get:97 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 DEP-11 Metadata [940 B]
+Get:98 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [440 B]
+Get:99 http://archive.ubuntu.com/ubuntu jammy-backports/universe Sources [10.6 kB]
+Get:100 http://archive.ubuntu.com/ubuntu jammy-backports/main Sources [8,224 B]
+Get:101 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [67.7 kB]
+Get:102 http://archive.ubuntu.com/ubuntu jammy-backports/main i386 Packages [59.9 kB]
+Get:103 http://archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.1 kB]
+Get:104 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 DEP-11 Metadata [5,340 B]
+Get:105 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [388 B]
+Get:106 http://archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 DEP-11 Metadata [212 B]
+Get:107 http://archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:108 http://archive.ubuntu.com/ubuntu jammy-backports/universe i386 Packages [17.3 kB]
+Get:109 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [28.8 kB]
+Get:110 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.5 kB]
+Get:111 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 DEP-11 Metadata [23.0 kB]
+Get:112 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [672 B]
+Get:113 http://archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 DEP-11 Metadata [212 B]
+Get:114 http://archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]
+Get:115 https://packages.mozilla.org/apt mozilla/main i386 Packages [94.7 kB]
+Get:116 https://packages.mozilla.org/apt mozilla/main amd64 Packages [95.6 kB]
+Fetched 80.4 MB in 27s (2,975 kB/s)
+Reading package lists...
+Check succeeded:  APT cache
+
+Running check 'System snapshots'
+
+Fixing check 'System snapshots'
